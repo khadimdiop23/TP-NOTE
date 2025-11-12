@@ -1,0 +1,19 @@
+| Entité      | Attribut       | Type                                       | Clé | Description                            |
+| ----------- | -------------- | ------------------------------------------ | --- | -------------------------------------- |
+| PARTIE      | id_partie      | INT                                        | PK  | Identifiant unique de la partie        |
+|             | date_partie    | DATE                                       |     | Date de la partie                      |
+| JOUEUR      | id_joueur      | INT                                        | PK  | Identifiant unique du joueur           |
+|             | nom_joueur     | VARCHAR(100)                               |     | Nom du joueur                          |
+|             | role_joueur    | ENUM('maitre','utilisateur','observateur') |     | Rôle du joueur                         |
+|             | id_partie      | INT                                        | FK  | Partie à laquelle appartient le joueur |
+| PERSONNAGE  | id_personnage  | INT                                        | PK  | Identifiant unique du personnage       |
+|             | nom_personnage | VARCHAR(100)                               |     | Nom du personnage                      |
+|             | couleur        | VARCHAR(50)                                |     | Couleur du personnage                  |
+| PIECE       | id_piece       | INT                                        | PK  | Identifiant unique de la pièce         |
+|             | nom_piece      | VARCHAR(100)                               |     | Nom de la pièce                        |
+| OBJET       | id_objet       | INT                                        | PK  | Identifiant unique de l’objet          |
+|             | nom_objet      | VARCHAR(100)                               |     | Nom de l’objet                         |
+| DEPLACEMENT | id_deplacement | INT                                        | PK  | Identifiant unique du déplacement      |
+|             | date_visite    | DATE                                       |     | Date du déplacement                    |
+|             | heure_entree   | TIME                                       |     | Heure d’entrée                         |
+|             | heure_sortie   | TIME                                       |     | Heure de sortie                        |
